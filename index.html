@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="splork.js"></script>
     
+    $('nav a#toggle').click(function() {
+  $('ul').slideToggle(200, function() {
+    // Animation complete.
+  });
+});
     <nav role='navigation'>
     <a href="#" id="toggle">=</a>
   <ul>
