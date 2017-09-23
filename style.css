@@ -14,9 +14,9 @@ body {
 .menu {
   height: 33px;
   position: absolute;
-  left: 5%;
+  left: 50%;
   margin-left: -18px;
-  top: 5%;
+  top: 50%;
   margin-top: -11px;
   width: 40px;
   z-index: 2;
