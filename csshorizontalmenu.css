@@ -8,7 +8,7 @@ list-style-type: none;
 .horizontalcssmenu ul li{
 position: relative;
 display: inline;
-float: center;
+float: left;
 
 }
 
@@ -57,13 +57,13 @@ border-width: 0 1px 1px 1px;
 }
 
 .horizontalcssmenu ul li ul li a:hover{
-background: #cde686;
+background: #ffffff;
 }
 
 .horizontalcssmenu .arrowdiv{
 position: absolute;
 right: 0;
-background: transparent url(menuarrow.gif) no-repeat center left;
+/*background: transparent url(menuarrow.gif) no-repeat center left; remmed */
 }
 
 * html p#iepara{ /*For a paragraph (if any) that immediately follows menu, add 1em top spacing between the two in IE*/
