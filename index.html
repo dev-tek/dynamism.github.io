@@ -77,7 +77,7 @@ function initstaticmenu(){
 	var topcorner=(window.pageYOffset)? window.pageYOffset : iebody.scrollTop
 	for (var i=0; i<staticmenuids.length; i++)
 		document.getElementById(staticmenuids[i]).style.top=topcorner+staticmenuoffsetY[i]+"px"
-	setTimeout("initstaticmenu()", 100)
+	setTimeout("initstaticmenu()", 300)
 }
 
 if (window.addEventListener)
@@ -112,7 +112,7 @@ window.attachEvent("onload", getmenuoffsetY)
 <li><a href="http://">neuron</a></li>
 <li><a href="http://">deep neural network</a></li>
 <li><a href="http://">Boltzmann machine</a></li>
-<li><a href="http://">noize</a></li>
+<li><a href="http://codingbat.com/python">codingbat</a></li>
 <li><a href="http://">about</a></li>
 </ul>
 </div>
