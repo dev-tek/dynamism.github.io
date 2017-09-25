@@ -14,7 +14,7 @@ border: 1px solid #C0C0C0;
 background-color: white;
 border-bottom-width: 0;
 width: 170px;
-position: absolute;
+position: middle;
 }
 
 * html .wireframemenu{ /*IE only rule. Original menu width minus all left/right paddings */
@@ -28,7 +28,7 @@ list-style-type: none;
 }
 
 .wireframemenu a{
-font: bold 13px Verdana;
+font: bold 13px Arial;
 padding: 4px 3px;
 display: block;
 width: 100%; /*Define width for IE6's sake*/
@@ -77,7 +77,7 @@ function initstaticmenu(){
 	var topcorner=(window.pageYOffset)? window.pageYOffset : iebody.scrollTop
 	for (var i=0; i<staticmenuids.length; i++)
 		document.getElementById(staticmenuids[i]).style.top=topcorner+staticmenuoffsetY[i]+"px"
-	setTimeout("initstaticmenu()", 300)
+	setTimeout("initstaticmenu()", 100)
 }
 
 if (window.addEventListener)
