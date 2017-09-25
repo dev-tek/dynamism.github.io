@@ -5,7 +5,87 @@
     <meta charset="utf-8">
     
     <title>dynamism</title>
-  
+    
+    
+  <style type="text/css">
+
+.wireframemenu{
+border: 1px solid #C0C0C0;
+background-color: white;
+border-bottom-width: 0;
+width: 170px;
+position: absolute;
+}
+
+* html .wireframemenu{ /*IE only rule. Original menu width minus all left/right paddings */
+width: 164px;
+}
+
+.wireframemenu ul{
+padding: 0;
+margin: 0;
+list-style-type: none;
+}
+
+.wireframemenu a{
+font: bold 13px Verdana;
+padding: 4px 3px;
+display: block;
+width: 100%; /*Define width for IE6's sake*/
+color: #595959;
+text-decoration: none;
+border-bottom: 1px solid #C0C0C0;
+}
+
+.wireframemenu a:visited{
+color: #595959;
+}
+
+html>body .wireframemenu a{ /*Non IE rule*/
+width: auto;
+}
+
+.wireframemenu a:hover{
+background-color: #F8FBBD;
+color: black;
+}
+
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+noize
+***********************************************/
+
+//ids of menus to keep static on page (must be absolutely positioned, with left/top attribute added inline inside tag)
+//Separate multiple ids with a comma (ie: ["menu1", "menu2"]
+var staticmenuids=["staticmenu"]
+
+var staticmenuoffsetY=[]
+
+function getmenuoffsetY(){
+	for (var i=0; i<staticmenuids.length; i++){
+		var currentmenu=document.getElementById(staticmenuids[i])
+	 staticmenuoffsetY.push(isNaN(parseInt(currentmenu.style.top))? 0 : parseInt(currentmenu.style.top))
+	}
+		initstaticmenu()
+}
+
+function initstaticmenu(){
+	var iebody=(document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+	var topcorner=(window.pageYOffset)? window.pageYOffset : iebody.scrollTop
+	for (var i=0; i<staticmenuids.length; i++)
+		document.getElementById(staticmenuids[i]).style.top=topcorner+staticmenuoffsetY[i]+"px"
+	setTimeout("initstaticmenu()", 100)
+}
+
+if (window.addEventListener)
+window.addEventListener("load", getmenuoffsetY, false)
+else if (window.attachEvent)
+window.attachEvent("onload", getmenuoffsetY)
+
+</script>
     
 <link rel="stylesheet" type="text/css" href="some_noize.css"/>
 
@@ -25,7 +105,17 @@
       &nbsp;
       
          &nbsp;
-      
+    
+<div id="staticmenu" class="wireframemenu" style="left: 10px; top: 20px">
+<ul>
+<li><a href="http://www.dynamicdrive.com/">Dynamic Drive</a></li>
+<li><a href="http://www.dynamicdrive.com/style/">CSS Library</a></li>
+<li><a href="http://www.dynamicdrive.com/forums/">Forums</a></li>
+<li><a href="http://tools.dynamicdrive.com/imageoptimizer/">Gif Optimizer</a></li>
+<li><a href="http://tools.dynamicdrive.com/favicon/">Favicon Creator</a></li>
+<li><a href="http://tools.dynamicdrive.com/button/">Button Maker</a></li>
+</ul>
+</div>
       
             &nbsp;
       
