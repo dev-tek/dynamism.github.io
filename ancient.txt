@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    
+    <title>noize</title>
+    
+    
+  <style type="text/css">
+
+.wireframemenu{
+border: 1px solid #C0C0C0;
+background-color: white;
+border-bottom-width: 0;
+width: 170px;
+position: middle;
+}
+
+* html .wireframemenu{ /*IE only rule. Original menu width minus all left/right paddings */
+width: 164px;
+}
+
+.wireframemenu ul{
+padding: 0;
+margin: 0;
+list-style-type: none;
+}
+
+.wireframemenu a{
+font: bold 13px Arial;
+padding: 4px 3px;
+display: block;
+width: 100%; /*Define width for IE6's sake*/
+color: #595959;
+text-decoration: none;
+border-bottom: 1px solid #C0C0C0;
+}
+
+.wireframemenu a:visited{
+color: #595959;
+}
+
+html>body .wireframemenu a{ /*Non IE rule*/
+width: auto;
+}
+
+.wireframemenu a:hover{
+background-color: #000000;
+color: white;
+}
+
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+noize
+***********************************************/
+
+//ids of menus to keep static on page (must be absolutely positioned, with left/top attribute added inline inside tag)
+//Separate multiple ids with a comma (ie: ["menu1", "menu2"]
+var staticmenuids=["staticmenu"]
+
+var staticmenuoffsetY=[]
+
+function getmenuoffsetY(){
+	for (var i=0; i<staticmenuids.length; i++){
+		var currentmenu=document.getElementById(staticmenuids[i])
+	 staticmenuoffsetY.push(isNaN(parseInt(currentmenu.style.top))? 0 : parseInt(currentmenu.style.top))
+	}
+		initstaticmenu()
+}
+
+function initstaticmenu(){
+	var iebody=(document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+	var topcorner=(window.pageYOffset)? window.pageYOffset : iebody.scrollTop
+	for (var i=0; i<staticmenuids.length; i++)
+		document.getElementById(staticmenuids[i]).style.top=topcorner+staticmenuoffsetY[i]+"px"
+	setTimeout("initstaticmenu()", 100)
+}
+
+if (window.addEventListener)
+window.addEventListener("load", getmenuoffsetY, false)
+else if (window.attachEvent)
+window.attachEvent("onload", getmenuoffsetY)
+
+</script>
+    
+<link rel="stylesheet" type="text/css" href="some_noize.css"/>
+
+
+    
+  </head> 
+  
+  <body>
+    
+
+<a href = "index.html"><img src="og.png" height="50" width="50" align="left" alt="OG"></a>
+<a href = "index.html"><img src="23242190.png" height="50" width="50" align="right" alt="splork"></a>
+ 
+
+  &nbsp;
+      
+      &nbsp;
+      
+         &nbsp;
+    
+<div id="staticmenu" class="wireframemenu" style="left: 10px; top: 20px">
+<ul>
+<li><a href="index.html">index</a></li>
+<li><a href="http://">neuron</a></li>
+<li><a href="http://">deep neural network</a></li>
+<li><a href="http://">Boltzmann machine</a></li>
+<li><a href="http://codingbat.com/python">codingbat</a></li>
+<li><a href="http://">about</a></li>
+</ul>
+</div>
+      
+            &nbsp;
+      
+      
+               &nbsp;
+    
+  </p>
+
+ 
+
+  &nbsp;
+	
+	<div style="position: absolute; top: 250px; left: 50px; width: 50%; background-color: 666666;">
+  
+</div>
+	
+   &nbsp;
+  
+<p style="color:#000000";><font face = "Arial,Helvetica">this is a test</font></p>
+      
+
+    
+   &nbsp;
+   &nbsp;
+   &nbsp;
+	
+ <table>
+
+  <col style="background-color: white">
+ 
+  <tr>
+   <p style="color:#000000";><font face = "Arial,Helvetica"> this is a test</font></p>
+  </tr>
+ 
+</table>
+
+	
+  
+        
+    
+
+    
+<div style="position: absolute; top: 250px; left: 50px; width: 50%; background-color: 666666;">
+  
+</div>
+	
+   &nbsp;
+  
+<p style="color:#000000";><font face = "Arial,Helvetica">this is a test</font></p>
+      
+
+    
+   &nbsp;
+   &nbsp;
+   &nbsp;
+	
+ <table>
+
+  <col style="background-color: white">
+ 
+  <tr>
+   <p style="color:#000000";><font face = "Arial,Helvetica"> this is a test</font></p>
+  </tr>
+ 
+</table>
+
+	
+   &nbsp;
+   &nbsp;
+      
+<input type="image" src="left.png" height=20" width="20" align="left" alt="history -1" border=0 name="Change" onclick="window.history.back()">
+ 
+                                                                                                                                             
+                                                                                                                                             </div>
+
+ &nbsp;
+
+
+    
+  </body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    
+    <title>noize</title>
+    
+    
+  <style type="text/css">
+
+.wireframemenu{
+border: 1px solid #C0C0C0;
+background-color: white;
+border-bottom-width: 0;
+width: 170px;
+position: middle;
+}
+
+* html .wireframemenu{ /*IE only rule. Original menu width minus all left/right paddings */
+width: 164px;
+}
+
+.wireframemenu ul{
+padding: 0;
+margin: 0;
+list-style-type: none;
+}
+
+.wireframemenu a{
+font: bold 13px Arial;
+padding: 4px 3px;
+display: block;
+width: 100%; /*Define width for IE6's sake*/
+color: #595959;
+text-decoration: none;
+border-bottom: 1px solid #C0C0C0;
+}
+
+.wireframemenu a:visited{
+color: #595959;
+}
+
+html>body .wireframemenu a{ /*Non IE rule*/
+width: auto;
+}
+
+.wireframemenu a:hover{
+background-color: #000000;
+color: white;
+}
+
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+noize
+***********************************************/
+
+//ids of menus to keep static on page (must be absolutely positioned, with left/top attribute added inline inside tag)
+//Separate multiple ids with a comma (ie: ["menu1", "menu2"]
+var staticmenuids=["staticmenu"]
+
+var staticmenuoffsetY=[]
+
+function getmenuoffsetY(){
+	for (var i=0; i<staticmenuids.length; i++){
+		var currentmenu=document.getElementById(staticmenuids[i])
+	 staticmenuoffsetY.push(isNaN(parseInt(currentmenu.style.top))? 0 : parseInt(currentmenu.style.top))
+	}
+		initstaticmenu()
+}
+
+function initstaticmenu(){
+	var iebody=(document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+	var topcorner=(window.pageYOffset)? window.pageYOffset : iebody.scrollTop
+	for (var i=0; i<staticmenuids.length; i++)
+		document.getElementById(staticmenuids[i]).style.top=topcorner+staticmenuoffsetY[i]+"px"
+	setTimeout("initstaticmenu()", 100)
+}
+
+if (window.addEventListener)
+window.addEventListener("load", getmenuoffsetY, false)
+else if (window.attachEvent)
+window.attachEvent("onload", getmenuoffsetY)
+
+</script>
+    
+<link rel="stylesheet" type="text/css" href="some_noize.css"/>
+
+
+    
+  </head> 
+  
+  <body>
+    
+
+<a href = "index.html"><img src="og.png" height="50" width="50" align="left" alt="OG"></a>
+<a href = "index.html"><img src="23242190.png" height="50" width="50" align="right" alt="splork"></a>
+ 
+
+  &nbsp;
+      
+      &nbsp;
+      
+         &nbsp;
+    
+<div id="staticmenu" class="wireframemenu" style="left: 10px; top: 20px">
+<ul>
+<li><a href="index.html">index</a></li>
+<li><a href="http://">neuron</a></li>
+<li><a href="http://">deep neural network</a></li>
+<li><a href="http://">Boltzmann machine</a></li>
+<li><a href="http://codingbat.com/python">codingbat</a></li>
+<li><a href="http://">about</a></li>
+</ul>
+</div>
+      
+            &nbsp;
+      
+      
+               &nbsp;
+    
+  </p>
+
+ 
+  
+        
+    
+
+    
+<div style="position: absolute; top: 250px; left: 50px; width: 50%; background-color: 666666;">
+  
+</div>
+	
+   &nbsp;
+  
+<p style="color:#000000";><font face = "Arial,Helvetica">this is a test</font></p>
+      
+
+    
+   &nbsp;
+   &nbsp;
+   &nbsp;
+	
+ <table>
+
+  <col style="background-color: white">
+ 
+  <tr>
+   <p style="color:#000000";><font face = "Arial,Helvetica"> this is a test</font></p>
+  </tr>
+ 
+</table>
+
+	
+   &nbsp;
+   &nbsp;
+      
+<input type="image" src="left.png" height=20" width="20" align="left" alt="history -1" border=0 name="Change" onclick="window.history.back()">
+ 
+                                                                                                                                             
+                                                                                                                                             </div>
+
+ &nbsp;
+
+
+    
+  </body>
+</html>
+
+
+
+<a href = "index.html"><img src="og.png" height="50" width="50" align="left" alt="OG"></a>
+
+
+<table>
+
+  <col style="background-color: white">
+ 
+  <tr>
+   <p style="color:#000000";><font face = "Arial,Helvetica"> this is a test</font></p>
+  </tr>
+ 
+</table>
+
+	
+   &nbsp;
+   &nbsp;
+      
+<input type="image" src="left.png" height=20" width="20" align="left" alt="history -1" border=0 name="Change" onclick="window.history.back()">
+ 
+                                                                                                                                             
+                                                                                                                                             </div>
+
+ &nbsp;
+
+
+<a href = "index.html"><img src="23242190.png" height="50" width="50" align="right" alt="splork"></a>
+
+
+
+
+
+
