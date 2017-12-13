@@ -406,6 +406,8 @@ window.attachEvent("onload", getmenuoffsetY)
 
 275 days as of 12/13/2017 - skills degraded to point of being ridiculous
 
+https://mobiforge.com/design-development/mobile-friendliness-101-how-to-build-a-fixed-navigation-bar
+
 
 
 
