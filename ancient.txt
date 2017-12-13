@@ -404,6 +404,9 @@ window.attachEvent("onload", getmenuoffsetY)
 <a href = "index.html"><img src="23242190.png" height="50" width="50" align="right" alt="splork"></a>
 
 
+275 days as of 12/13/2017 - skills degraded to point of being ridiculous
+
+
 
 
 
