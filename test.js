@@ -1,7 +1,7 @@
 if (exports) {
   var fs = require('fs');
   var jsdom = require('jsdom').jsdom;
-  var html = fs.readFileSync('./test/index.html', 'utf-8');
+  var html = fs.readFileSync('index.html', 'utf-8');
   var document = jsdom(html);
   window = document.defaultView;
   var Slideout = require('../');
