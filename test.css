@@ -1,206 +1,143 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
-html,
+html {
+    overflow-y: scroll;
+}
+
+/*
+Setup a basic body
+*/
 body {
-  font: 100%/1.4em 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin: 0 auto;
-  color: #222;
-  -webkit-text-size-adjust: none;
-  -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial;
+    font-size: 18px;
 }
 
-body,
-.panel {
-  background-color: #fff;
+/*
+Header is relative so z-index: 1 guarantees always displayed on top
+*/
+header {
+    background-color: #3b5998;
+    padding: 10px;
+    text-decoration: none;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
 }
 
-.menu {
-  background-color: #1D1F20;
-  background-image: linear-gradient(145deg, #1D1F20, #404348);
+/*
+using background color is important to cover the menu
+position absolute isset to cover the whole viewport
+*/
+#content {
+    background-color: #FFFFFF;
+    padding: 52px 10px 10px 10px;
+    position: relative;
+    width: auto;
+    height: 100%;
+    -webkit-box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
 }
 
-a {
-  color: #4B5;
-  text-decoration: none;
+/*
+the hamburger button with a little gradient effekt
+*/
+#hamburger {
+    border: 1px solid #374C77;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    padding: 3px 4px 3px;
+    position: relative;
+    width: 25px;
+    background: #4569b2;
+    background: -moz-linear-gradient(top, #4569b2 0%, #4062a5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4569b2), color-stop(100%, #4062a5));
+    background: -webkit-linear-gradient(top, #4569b2 0%, #4062a5 100%);
+    background: -o-linear-gradient(top, #4569b2 0%, #4062a5 100%);
+    background: -ms-linear-gradient(top, #4569b2 0%, #4062a5 100%);
+    background: linear-gradient(to bottom, #4569b2 0%, #4062a5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4569b2', endColorstr='#4062a5', GradientType=0);
 }
 
-.menu a {
-  color: #fff;
+/*
+The white stripes in the hamburger button
+*/
+#hamburger div {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 2px 2px 2px 2px;
+    height: 2px;
+    margin-top: 3px;
+    width: 90%;
 }
 
-.menu a:hover {
-  text-decoration: underline;
-}
-
-.menu-header {
-  border-bottom: 1px solid #2a2d2f;
-  padding: 20px;
-  background-size: 32px;
-}
-
-.menu-header-title {
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  margin: 0;
-}
-
-.menu-section {
-  margin: 25px 0;
-}
-
-.menu-section-title {
-  text-transform: uppercase;
-  color: #85888d;
-  font-weight: 200;
-  font-size: 13px;
-  letter-spacing: 1px;
-  padding: 0 20px;
-  margin:0;
-}
-
-.menu-section-list {
-  padding:0;
-  margin: 10px 0;
-  list-style:none;
-}
-
-.menu-section-list a {
-  display: block;
-  padding: 10px 20px;
-}
-
-.panel {
-  text-align: center;
-  padding-top: 5px;
-  min-height: 100%;
-}
-
-#mocha {
-  text-align: left;
-  margin:0 !important;
-}
-
-#mocha-stats {
-  top: 70px;
-}
-
-/**
- * Header
- */
-.panel-header {
-  margin: 120px auto 55px;
-}
-
-.title {
-  font-size: 3.2em;
-  line-height: 1em;
-  margin: 0 0 15px;
-  color: #4B5;
-  font-weight: 400;
-}
-
-/**
- * hamburger
- */
-.btn-hamburger {
-  border: none;
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  outline:none;
-  background: url('assets/menu.png') no-repeat center;
-  width: 50px;
-  height: 50px;
-}
-
-/**
- * Boxes
- */
-.box {
-  border: 1px solid #4b5;
-  border-radius: 4px;
-  text-align: left;
-  margin: 50px 10px;
-  position: relative;
-}
-
-.box:before,
-.box:after {
-  content: ' ';
-  display: inline-block;
-  width: 1px;
-  height: 50px;
-  border-left: 1px solid #4b5;
-  position: absolute;
-  left: 50%;
-}
-
-.box:before {
-  top: -50px;
-}
-
-.box:after {
-  bottom: -50px;
-}
-
-.box-title {
-  margin: 0;
-  padding:10px 20px;
-  border-bottom: 1px solid #4b5;
-  color: #4b5;
-  font-size: 1.2em;
-  font-weight: 400;
-}
-
-.box-content {
-  padding:20px;
-  background-color: #f8f8f8;
-}
-
-/**
- * Medium Screens
- */
-@media all and (min-width:40em) {
-
-  .btn-hamburger {
-    top: 20px;
-    left: 30px;
-  }
-
-  .panel-header {
-    margin-top: 40px;
-    width: 455px;
-  }
-
-  .title {
-    font-size: 4.2em;
-  }
-}
-
-/**
- * Large Screens
- */
-@media all and (min-width: 54em) {
-  .box {
+/*
+The navigation container in the background
+*/
+nav {
+    opacity: 0;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    z-index: 0;
     width: 70%;
-    max-width: 1200px;
-    margin: 50px auto;
-  }
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #3e3c3d;
+    background: -moz-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e3c3d), color-stop(100%, #2d2c2d));
+    background: -webkit-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: -o-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: -ms-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: linear-gradient(to bottom, #3e3c3d 0%, #2d2c2d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3e3c3d', endColorstr='#2d2c2d', GradientType=0);
 }
 
-/**
- * Footer
- */
-.panel-footer {
-  margin: 10px auto 20px;
+/*
+Style the navigation menu
+*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    padding: 0;
 }
 
-.panel-footer p {
-  padding-bottom: 20px;
+nav li {
+    position: relative;
+    font-size: 1em;
+    font-weight: bold;
+    border-bottom: 1px solid #222222;
+    border-top: 1px solid #444444;
+    padding: 15px;
 }
 
-.heart {
-  font-style: normal;
-  font-weight: 500;
-  color: #c0392b;
-  text-decoration: none;
+nav li a {
+    color: #fff;
+    text-decoration: none;
 }
+
+/*
+The Layer that will be layed over the content
+so that the content is unclickable while menu is shown
+*/
+#contentLayer {
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+    z-index: 5;
+}
+
