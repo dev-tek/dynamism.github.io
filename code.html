@@ -1,0 +1,146 @@
+<html>
+  
+  <head>
+    
+    <title>dyne</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  </head>
+  
+  <body>
+    <nav class="fixed-nav">
+      
+        <a href="index.html"><img src=23242190.png height="35" /></a>
+    <ul> 
+        <li><a href="#">dyne</a></li>
+        <li><a href="not_found">locate</a></li>
+        <li><a href="#">code</a></li>
+        
+    </ul>
+ 
+    </nav>
+    
+    <main>
+      <!-- ridiculous operator error-->
+      <p style="color:#000000";><font face = "Arial,Helvetica">
+        &nbsp; </p>
+      
+        &nbsp;</p>
+
+      <center>
+  
+<table>
+  <col style="background-color: white">
+ 
+  <tr>
+   <p style="color:#000000";><font face = "Arial,Helvetica">
+
+     
+     </font></p>
+  </tr>
+ 
+</table>	
+    &nbsp;</p>
+  
+    </center>
+  
+</main>
+
+&nbsp;</p>
+ 
+
+ 
+&nbsp;</p>
+
+<center>
+  
+
+    
+    </center>
+                                                                                                                                      
+    <style>
+      .fixed-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: ffffff;
+ 
+        white-space: nowrap;
+        height: 50px;
+        box-sizing: border-box;
+        padding: 10px;
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.16),0px 3px 6px rgba(0,0,0,0.23);      
+      }
+ 
+      .fixed-nav ul, .fixed-nav li {
+        display:inline;
+      }
+ 
+      .fixed-nav a {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 17px 10px;
+        color: #333;
+        font-family: arial;
+      }
+ 
+      .fixed-nav a:hover {
+        background-color: #000;
+        color: #eee;
+      }
+ 
+      .fixed-nav ul {
+        padding:0;
+      }
+      .fixed-nav img {
+        vertical-align: middle;
+      }
+      main {margin-top:55px;}
+    </style>
+    <script>
+      (function() {
+        'use strict';
+ 
+        var nav   = document.querySelector('.fixed-nav');
+        if(!nav) return true;
+ 
+        var navHeight   = 0,
+            navTop      = 0,
+            scrollCurr  = 0,
+            scrollPrev  = 0,
+            scrollDiff  = 0;
+ 
+        window.addEventListener('scroll', function() {
+          navHeight = nav.offsetHeight;
+          scrollCurr = window.pageYOffset;
+          scrollDiff = scrollPrev - scrollCurr;
+          navTop = parseInt(window.getComputedStyle(nav).getPropertyValue('top')) + scrollDiff;
+ 
+          // Scroll to top: fix navbar to top
+          if(scrollCurr <= 0) 
+            nav.style.top = '0px';
+ 
+          // Scroll up: show navbar
+          else if(scrollDiff > 0) 
+            nav.style.top = (navTop > 0 ? 0 : navTop) + 'px';
+ 
+          // Scroll down: hide navbar
+          else if(scrollDiff < 0) {
+            nav.style.top = (Math.abs(navTop) > navHeight ? - navHeight : navTop) + 'px';
+          }
+ 
+          // Note last scroll position
+          scrollPrev = scrollCurr;
+        });
+ 
+      }());
+    </script>  
+  </body>
+    
+    
+   <a href = "index.html"><img src="og.png" height="50" width="50" align="left" alt="OG"></a>
+        
+
+</html>
